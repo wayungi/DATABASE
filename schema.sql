@@ -32,3 +32,20 @@ CREATE TABLE species (id SERIAL PRIMARY KEY, name VARCHAR(20));
     ALTER TABLE animals ADD owner_id INT;
     ALTER TABLE animals ADD CONSTRAINT owners_fk FOREIGN KEY (owner_id) REFERENCES owners(id);
 
+    /*Thursday*/
+    -- Create a table named vets 
+    CREATE TABLE vets(id INT GENERATED ALWAYS AS IDENTITY, name VARCHAR(40), age INT, date_of_graduation DATE);
+    -- Create a "join table" called specializations
+    CREATE TABLE specializations (species_id INT, vets_id INT);
+    -- Create a "join table" called visits
+    CREATE TABLE visits (animals_id INT, vets_id INT, date DATE);
+
+
+
+
+
+
+
+
+
+
