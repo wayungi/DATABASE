@@ -16,3 +16,28 @@ VALUES ('Charmander', '2020-02-08',0, TRUE, 11.00, NULL),
 ('Boarmon', '2005-06-07',7, TRUE, 20.40, NULL),
 ('Blossom', '1998-10-13',3, TRUE, 17.00, NULL),
 ('Ditto', '2022-05-14',4, TRUE, 22.00, NULL);
+
+/* WEDNESDAY */
+
+/*Insert the following data into the owners table */
+INSERT INTO owners (full_name, age) VALUES ('Sam Smith', 34), 
+('Jennifer Orwell', 19),
+('Bob', 45),('Melody Pond', 77),
+('Dean Winchester', 14),
+('Jodie Whittaker', 38);
+
+/* Insert the following data into the species table  */
+INSERT INTO species (name) VALUES ('Pokemon'), ('Digimon');
+
+/* Modify your inserted animals so it includes the species_id value */
+UPDATE animals SET species_id = 2 WHERE name LIKE '%mon';
+UPDATE animals SET species_id = 1 WHERE name NOT LIKE '%mon';
+
+-- Modify your inserted animals to include owner information (owner_id): 
+UPDATE animals SET owner_id = 1 WHERE name = 'Agumon';
+UPDATE animals SET owner_id = 2 WHERE name IN ('Gabumon', 'Pikachu');
+UPDATE animals SET owner_id = 3 WHERE name IN ('Devimon', 'Plantmon');
+UPDATE animals SET owner_id = 4 WHERE name IN ('Charmander', 'Squirtle', 'Blossom');
+UPDATE animals SET owner_id = 5 WHERE name IN ('Angemon', 'Boarmon');
+
+
