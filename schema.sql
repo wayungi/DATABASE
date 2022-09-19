@@ -40,6 +40,14 @@ CREATE TABLE species (id SERIAL PRIMARY KEY, name VARCHAR(20));
     -- Create a "join table" called visits
     CREATE TABLE visits (animals_id INT, vets_id INT, date DATE);
 
+    /* Monday week 2*/
+
+    CREATE INDEX animal_id_asc ON visits(animal_id ASC);
+
+    CREATE INDEX vet_id_asc ON visits(vet_id ASC);
+
+    CREATE INDEX email_asc ON owners(email ASC);
+
 
 
 
