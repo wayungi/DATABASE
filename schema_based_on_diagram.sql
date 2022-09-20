@@ -1,9 +1,9 @@
 --create patients table
-CREATE TABLE patients (id INT GENERATED ALWAYS AS IDENTITY (START WITH 1 INCREMENT BY 1), name VARCHAR (40), date_of_birth DATE);
-ALTER TABLE patients  ADD PRIMARY KEY(id)
+CREATE TABLE patients (id INT GENERATED ALWAYS AS IDENTITY, name VARCHAR (40), date_of_birth DATE);
+ALTER TABLE patients  ADD PRIMARY KEY(id);
 
 --create medical-histories
-CREATE TABLE medical_histories (id INT GENERATED ALWAYS AS IDENTITY (START WITH 1 INCREMENT BY 1), admitted_at TIMESTAMP, patient_id INT NOT NULL, status VARCHAR(40), PRIMARY KEY (id), CONSTRAINT fk_patient FOREIGN KEY (patient_id) REFERENCES patients(id) ON DELETE CASCADE);
+CREATE TABLE medical_histories (id INT GENERATED ALWAYS AS IDENTITY, admitted_at TIMESTAMP, patient_id INT NOT NULL, status VARCHAR(40), PRIMARY KEY (id), CONSTRAINT fk_patient FOREIGN KEY (patient_id) REFERENCES patients(id) ON DELETE CASCADE);
 
 --create table treatments
 CREATE TABLE treatments (id INT GENERATED ALWAYS AS IDENTITY (START WITH 1 INCREMENT BY 1), type VARCHAR(40), name VARCHAR(40), PRIMARY KEY (id));
