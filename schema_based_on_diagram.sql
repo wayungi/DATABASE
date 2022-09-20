@@ -16,3 +16,11 @@ CREATE TABLE invoice_items ( id INT GENERATED ALWAYS AS IDENTITY, unit_price DEC
 
 --create joining table between treatments & medical histories
 CREATE TABLE treatment_histories (treatment_id INT, medical_history_id INT, CONSTRAINT fk_treatment_id FOREIGN KEY (treatment_id) REFERENCES treatments(id), CONSTRAINT fk_medical_history FOREIGN KEY (medical_history_id) REFERENCES medical_histories(id));
+
+--createing indexex
+CREATE INDEX index_patient_id ON medical_histories(patient_id);
+CREATE INDEX index_medical_history_id ON invoices(medical_history_id);
+CREATE INDEX index_invoice_id ON invoice_items(invoice_id);
+CREATE INDEX index_treatment_id ON invoice_items(treatment_id);
+CREATE INDEX indx_treatment_id ON treatment_histories(treatment_id);
+CREATE INDEX indx_medical_history_id ON treatment_histories(medical_history_id);

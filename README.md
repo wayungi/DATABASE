@@ -21,6 +21,12 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - Twitter: [@twitterhandle](https://twitter.com/FrancisWayungi)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/francis-wayungi-3aa626231)
 
+👤 Alejandro torres
+
+GitHub: [@aizjicod](https://github.com/aizjicod)
+Twitter: [@aizijijr](https://twitter.com/aizijijr)
+LinkedIn: [aiziji](https://www.linkedin.com/in/aiziji/)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
